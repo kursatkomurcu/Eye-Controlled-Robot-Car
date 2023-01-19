@@ -61,46 +61,46 @@ with mp_face_mesh.FaceMesh(
             
             #eye bounding boxes divided 9 area
             #command variable should be sended to microcontroler
-            komut = None
+            command = None
             if(center_left[1] < (yl + (2*hl/3)) and center_left[1] > (yl + (hl/3)) and center_left[0] < (xl + (2*wl/3)) and center_left[0] > (xl + (wl/3))):
-                frame = cv2.putText(frame, "Merkez Bölge", (15, 15), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2, cv2.LINE_AA)
-                komut = "Merkez Bölge" #göz merkeze baktığında araç duracak
-                print(komut)
+                frame = cv2.putText(frame, "Center", (15, 15), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2, cv2.LINE_AA)
+                command = "Center" #stop
+                print(command)
             elif(center_left[1] < (yl + (hl/3)) and center_left[1] > (yl) and center_left[0] < (xl + (wl/3)) and center_left[0] > (xl)):
-                frame = cv2.putText(frame, "Sol yukari", (15, 15), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2, cv2.LINE_AA)
-                komut = "Sol yukari"
+                frame = cv2.putText(frame, "Upper Left", (15, 15), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2, cv2.LINE_AA)
+                command = "Upper Left"
                 print(komut)
             elif(center_left[1] < (yl + (hl/3)) and center_left[1] > (yl) and center_left[0] < (xl + (2*wl/3)) and center_left[0] > (xl+ (wl/3))):
-                frame = cv2.putText(frame, "Yukari", (15, 15), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2, cv2.LINE_AA)
-                komut = "Yukari"
-                print(komut)
+                frame = cv2.putText(frame, "Up", (15, 15), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2, cv2.LINE_AA)
+                command = "Up"
+                print(command)
             elif(center_left[1] < (yl + (hl/3)) and center_left[1] > (yl) and center_left[0] < (xl + wl) and center_left[0] > (xl + (2*hl/3))):
-                frame = cv2.putText(frame, "Sag yukari", (15, 15), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2, cv2.LINE_AA)
-                komut = "Sag yukari"
-                print(komut)
+                frame = cv2.putText(frame, "Upper Right", (15, 15), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2, cv2.LINE_AA)
+                command = "Upper Right"
+                print(command)
             elif(center_left[1] < (yl + hl) and center_left[1] > (yl + (2*hl/3)) and center_left[0] < (xl + (wl/3)) and center_left[0] > (xl)):
-                frame = cv2.putText(frame, "Sol asagi", (15, 15), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2, cv2.LINE_AA)
-                komut = "Sol asagi"
-                print(komut)
+                frame = cv2.putText(frame, "Left Down", (15, 15), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2, cv2.LINE_AA)
+                command = "Left Down"
+                print(command)
             elif(center_left[1] < (yl + hl) and center_left[1] > (yl + (2*hl/3)) and center_left[0] < (xl + (2*wl/3)) and center_left[0] > (xl + (wl/3))):
-                frame = cv2.putText(frame, "Asagi", (15, 15), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2, cv2.LINE_AA)
-                komut = "Asagi"
-                print(komut)
+                frame = cv2.putText(frame, "Down", (15, 15), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2, cv2.LINE_AA)
+                command = "Down"
+                print(command)
             elif(center_left[1] < (yl + hl) and center_left[1] > (yl + (2*hl/3)) and center_left[0] < (xl + wl) and center_left[0] > (xl + (2*wl/3))):
-                frame = cv2.putText(frame, "Sag asagi", (15, 15), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2, cv2.LINE_AA)
-                komut = "Sag asagi"
-                print(komut)
+                frame = cv2.putText(frame, "Right Down", (15, 15), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2, cv2.LINE_AA)
+                command = "Right Down"
+                print(command)
             elif(center_left[1] < (yl + (2*hl/3)) and center_left[1] > (yl + (hl/3)) and center_left[0] < (xl + (wl/3)) and center_left[0] > (xl)):
-                frame = cv2.putText(frame, "Sol", (15, 15), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2, cv2.LINE_AA)
-                komut = "Sol"
-                print(komut)
+                frame = cv2.putText(frame, "Left", (15, 15), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2, cv2.LINE_AA)
+                command = "Left"
+                print(command)
             elif(center_left[1] < (yl + (2*hl/3)) and center_left[1] > (yl + (hl/3)) and center_left[0] < (xl + wl) and center_left[0] > (xl + (2*wl/3))):
-                frame = cv2.putText(frame, "Sag", (15, 15), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2, cv2.LINE_AA)
-                komut = "Sag"
-                print(komut)
+                frame = cv2.putText(frame, "Right", (15, 15), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2, cv2.LINE_AA)
+                command = "Right"
+                print(command)
             else:
-                komut = "Empty Package" 
-                print(komut)
+                command = "Empty Package" 
+                print(command)
             
             bytesToSend = str.encode(komut)
             UDPClientSocket.sendto(bytesToSend, serverAddressPort)
