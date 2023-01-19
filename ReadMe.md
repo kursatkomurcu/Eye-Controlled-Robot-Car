@@ -106,10 +106,7 @@ Frames divided by 9 pieces for gaze detection.
 
 ​    `print(command)`
 
-<img src="/home/kursat/snap/typora/76/.config/Typora/typora-user-images/image-20230119223326226.png" alt="image-20230119223326226" style="zoom: 50%;" /><img src="/home/kursat/snap/typora/76/.config/Typora/typora-user-images/image-20230119223506815.png" alt="image-20230119223506815" style="zoom: 50%;" /><img src="/home/kursat/snap/typora/76/.config/Typora/typora-user-images/image-20230119223542200.png" alt="image-20230119223542200" style="zoom:50%;" />
-
-​                                  Up                                                                       Right                                                                    Left
-
+![](images/left1.png) ![](images/right1.png) ![](images/up1.png)
 **Command** variable is sended to ESP8266 Microcontroller via UDP after detecting gaze.
 
 
@@ -188,7 +185,7 @@ Udp receiver get command variable that come from eye detection code. Then, the m
 
 ​            `return duty_cycle`
 
-<img src="/home/kursat/snap/typora/76/.config/Typora/typora-user-images/image-20230119224618504.png" alt="image-20230119224618504" style="zoom: 33%;" />
+![](images/robot_car.jpg)
 
 ### How to run?
 
