@@ -107,6 +107,7 @@ Frames divided by 9 pieces for gaze detection.
 ​    `print(command)`
 
 ![](images/left1.png) ![](images/right1.png) ![](images/up1.png)
+
 **Command** variable is sended to ESP8266 Microcontroller via UDP after detecting gaze.
 
 
