@@ -73,19 +73,19 @@ while True:
     print('received:', data, 'from', addr)
     s.sendto(data, addr)
 
-    if (data == 'Merkez Bölge' or data== 'Empty Package'):
+    if (data == 'Center' or data== 'Empty Package'):
         dc_motor1.stop()
         dc_motor2.stop()
-    if (data == 'Yukari'):
+    if (data == 'Up'):
         dc_motor1.forward(100)
         dc_motor2.forward(100)
-    if (data == 'Asagi'):
+    if (data == 'Down'):
         dc_motor1.backwards(100)
         dc_motor2.backwards(100)
-    if(data == 'Sag'):
+    if(data == 'Right'):
         dc_motor2.forward(50)
         dc_motor1.backwards(50)
-    if (data == 'Sol' ):
+    if (data == 'Left' ):
         dc_motor1.forward(50)
         dc_motor2.backwards(50)
 
