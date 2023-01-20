@@ -53,8 +53,7 @@ dc_motor2 = DCMotor(pin3, pin4, enable2, 350, 1023)
 port = 20001
 wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
-# wlan.connect("Zyxel_B291", "DJE4G8E7YY")
-wlan.connect("AndroidAPD8DF", "qcgq2584")
+wlan.connect("Ssid", "password")
 
 while (wlan.isconnected() == False):
     time.sleep(1)
